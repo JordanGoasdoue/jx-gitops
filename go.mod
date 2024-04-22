@@ -34,7 +34,7 @@ require (
 	helm.sh/helm/v3 v3.10.3
 	k8s.io/api v0.28.4
 	k8s.io/apimachinery v0.29.0
-	k8s.io/client-go v11.0.1-0.20190805182717-6502b5e7b1b5+incompatible
+	k8s.io/client-go v0.28.4
 	sigs.k8s.io/kustomize/api v0.13.5-0.20230601165947-6ce0bf390ce3
 	sigs.k8s.io/kustomize/kyaml v0.14.3
 	sigs.k8s.io/yaml v1.4.0
@@ -288,11 +288,5 @@ require (
 	sigs.k8s.io/json v0.0.0-20221116044647-bc3834ca7abd // indirect
 	sigs.k8s.io/structured-merge-diff/v4 v4.4.1 // indirect
 )
-
-// to avoid
-// knative.dev/pkg/client/injection/kube/client imports
-// k8s.io/client-go/kubernetes/typed/policy/v1: package k8s.io/client-go/kubernetes/typed/policy/v1
-// provided by k8s.io/client-go at latest version v0.29.3 but not at required version v11.0.1-0.20190805182717-6502b5e7b1b5+incompatible
-replace k8s.io/client-go => k8s.io/client-go v0.28.4
 
 go 1.22.1
